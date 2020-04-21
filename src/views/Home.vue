@@ -2,9 +2,7 @@
   <div class="home">
     <full-page ref="fullpage" :options="options" id="fullpage">
       <introduction-page></introduction-page>
-      <div class="section">
-        Second section ...
-      </div>
+      <skill-page></skill-page>
       <div class="section">
         Second section ...
       </div>
@@ -17,9 +15,10 @@
 
 <script>
 import IntroductionPage from "../components/IntroductionPage";
+import SkillPage from "../components/SkillPage";
 export default {
   name: "Home",
-  components: { IntroductionPage },
+  components: { IntroductionPage, SkillPage },
   data() {
     return {
       options: {

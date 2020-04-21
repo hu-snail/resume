@@ -1,29 +1,31 @@
 <!--  author: hujinagjun -->
 <template>
   <div class="section">
-    <div class="section-content">
-      <div class="desc">
-        <h1>胡将军个人简历</h1>
-        <p class="peron-desc">
-          三年前端开发经验，熟练掌握前端工程化开发流程，参与公司前端规范制定和组件开发维护，有较强的的自学能力和团队协作能力。
-        </p>
-        <div class="item" v-for="(item, index) in list" :key="index">
-          <span class="title">
-            <i :class="'iconfont icon-' + item.icon"></i>
-            {{ item.title }}
-          </span>
-          <a :href="item | linkToVal">{{ item.value }}</a>
+    <div class="section-content container">
+      <div class="row">
+        <div class="desc col-xs-12 col-md-5">
+          <h1>胡将军个人简历</h1>
+          <p class="peron-desc">
+            三年前端开发经验，熟练掌握前端工程化开发流程，参与公司前端规范制定和组件开发维护，有较强的的自学能力和团队协作能力。
+          </p>
+          <div class="item" v-for="(item, index) in list" :key="index">
+            <span class="title">
+              <i :class="'iconfont icon-' + item.icon"></i>
+              {{ item.title }}
+            </span>
+            <a :href="item | linkToVal">{{ item.value }}</a>
+          </div>
         </div>
-      </div>
-      <div class="section-img">
-        <img :src="codeSvg" width="60%" />
+        <div class="section-img col-xs-12 col-md-7">
+          <img :src="resumeSvg" width="60%" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import codeSvg from "../assets/code.svg";
+import resumeSvg from "../assets/resume.svg";
 const list = [
   {
     title: "职 业",
@@ -86,7 +88,7 @@ export default {
   },
   data() {
     return {
-      codeSvg,
+      resumeSvg,
       list
     };
   },
@@ -102,15 +104,15 @@ export default {
 </script>
 <style lang="less" scoped>
 .section-content {
-  display: flex;
-  width: 80%;
   background: #fff;
-  margin: 0 auto;
+  .row {
+    height: 520px;
+  }
   .desc {
-    width: 40%;
     padding: 55px 25px;
     background: #9fd6d3;
     color: #fff;
+    height: 100%;
     text-align: left;
     box-sizing: border-box;
     .peron-desc {
@@ -127,8 +129,11 @@ export default {
   }
 }
 .section-img {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  box-sizing: border-box;
 }
 </style>

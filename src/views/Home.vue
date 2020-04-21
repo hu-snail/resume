@@ -26,8 +26,8 @@ export default {
         navigation: true,
         anchors: ["page1", "page2", "page3"],
         sectionsColor: [
-          "#b6e3e3",
-          "#ff5f45",
+          "#b7d3cf",
+          "#d8d2b8",
           "#0798ec",
           "#fec401",
           "#1bcee6",

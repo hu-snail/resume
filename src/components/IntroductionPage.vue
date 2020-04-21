@@ -47,7 +47,7 @@ const list = [
   },
   {
     title: "毕业院校",
-    value: "重庆电子工程职业技术学院",
+    value: "重庆大学 / 本科 / 软件工程",
     isLink: false,
     icon: "xueli"
   },
@@ -67,7 +67,7 @@ const list = [
   },
   {
     title: "现居地",
-    value: "贵阳观山湖区",
+    value: "上海市浦东区",
     isLink: false,
     icon: "address"
   }
@@ -109,8 +109,8 @@ export default {
     height: 520px;
   }
   .desc {
-    padding: 55px 25px;
-    background: #9fd6d3;
+    padding: 55px 35px;
+    background: #2d5a55;
     color: #fff;
     height: 100%;
     text-align: left;
@@ -121,9 +121,12 @@ export default {
     }
     .item {
       padding: 10px 0;
+      display: flex;
+      font-size: 14px;
       .title {
         text-justify: auto;
-        padding-right: 15px;
+        display: inline-block;
+        width: 120px;
       }
     }
   }
